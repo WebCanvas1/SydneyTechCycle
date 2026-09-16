@@ -1,39 +1,42 @@
 import { ArrowRight, MapPin } from 'lucide-react';
 import { TECH_STRIP_ITEMS } from '@/lib/constants';
 
-const HERO_IMAGE = 'https://images.pexels.com/photos/7598913/pexels-photo-7598913.jpeg?auto=compress&cs=tinysrgb&w=1920';
+const HERO_IMAGE = '/hero-recycling.jpg';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-ink-950">
-      {/* Background image */}
+      {/* Uploaded IT recycling background image */}
       <div className="absolute inset-0">
         <img
           src={HERO_IMAGE}
-          alt="IT recycling and sustainable electronics recovery"
-          className="w-full h-full object-cover"
+          alt="Green recycling symbol on electronic circuit board representing sustainable IT recycling"
+          className="w-full h-full object-cover object-center"
         />
       </div>
+
+      {/* A subtle left-side treatment only for text readability; the image remains unobscured across the hero. */}
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[58%] bg-gradient-to-r from-ink-950/55 via-ink-950/20 to-transparent pointer-events-none" />
 
       {/* Content */}
       <div className="relative container-px pb-16 pt-32 lg:pb-24 lg:pt-40">
         <div className="max-w-5xl">
           <div className="flex items-center gap-2 mb-8 animate-fade-in">
             <MapPin className="w-3.5 h-3.5 text-yellow-400" />
-            <span className="text-eyebrow text-yellow-400">Sydney • NSW</span>
+            <span className="text-eyebrow text-yellow-400 drop-shadow-md">Sydney • NSW</span>
           </div>
 
-          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up drop-shadow-lg">
+          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up drop-shadow-xl">
             Old Technology.
             <br />
             <span className="text-forest-500">New Purpose.</span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up drop-shadow-md" style={{ animationDelay: '0.15s' }}>
+          <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up drop-shadow-lg" style={{ animationDelay: '0.15s' }}>
             Secure, responsible IT asset disposal and electronics recycling for Sydney organisations.
           </p>
 
-          <p className="text-base text-cream-100 max-w-2xl mb-10 animate-fade-up drop-shadow-md" style={{ animationDelay: '0.25s' }}>
+          <p className="text-base text-cream-100 max-w-2xl mb-10 animate-fade-up drop-shadow-lg" style={{ animationDelay: '0.25s' }}>
             From office technology upgrades to complete IT infrastructure clear-outs, Sydney TechCycle helps organisations securely reuse, recover and recycle unwanted technology.
           </p>
 
