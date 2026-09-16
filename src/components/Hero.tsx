@@ -1,7 +1,7 @@
 import { ArrowRight, MapPin } from 'lucide-react';
 import { TECH_STRIP_ITEMS } from '@/lib/constants';
 
-const HERO_IMAGE = '/hero-recycling.jpg';
+const HERO_IMAGE = 'https://raw.githubusercontent.com/WebCanvas1/SydneyTechCycle/main/hero-recycling.jpg';
 
 export default function Hero() {
   return (
@@ -15,10 +15,9 @@ export default function Hero() {
         />
       </div>
 
-      {/* A subtle left-side treatment only for text readability; the image remains unobscured across the hero. */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-[58%] bg-gradient-to-r from-ink-950/55 via-ink-950/20 to-transparent pointer-events-none" />
+      {/* Subtle left-side contrast only so the image remains bright and visible. */}
+      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] bg-gradient-to-r from-ink-950/45 via-ink-950/10 to-transparent pointer-events-none" />
 
-      {/* Content */}
       <div className="relative container-px pb-16 pt-32 lg:pb-24 lg:pt-40">
         <div className="max-w-5xl">
           <div className="flex items-center gap-2 mb-8 animate-fade-in">
@@ -41,16 +40,11 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.35s' }}>
-            <a
-              href="#request-collection"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-yellow-400 text-ink-950 font-semibold text-sm tracking-wide rounded-full transition-all duration-300 ease-out-expo hover:bg-forest-600 hover:text-cream-50 hover:shadow-xl hover:shadow-forest-600/30 hover:-translate-y-0.5"
-            >
+            <a href="#request-collection" className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-yellow-400 text-ink-950 font-semibold text-sm tracking-wide rounded-full transition-all duration-300 ease-out-expo hover:bg-forest-600 hover:text-cream-50 hover:shadow-xl hover:shadow-forest-600/30 hover:-translate-y-0.5">
               Request a Collection
               <ArrowRight className="w-4 h-4" />
             </a>
-            <a href="#services" className="btn-dark-secondary">
-              Business Solutions
-            </a>
+            <a href="#services" className="btn-dark-secondary">Business Solutions</a>
           </div>
         </div>
       </div>
@@ -59,8 +53,7 @@ export default function Hero() {
         <div className="flex animate-marquee whitespace-nowrap">
           {[...TECH_STRIP_ITEMS, ...TECH_STRIP_ITEMS].map((item, i) => (
             <span key={i} className="text-eyebrow text-cream-400/50 mx-8 flex items-center gap-8">
-              {item}
-              <span className="text-yellow-400/60">•</span>
+              {item}<span className="text-yellow-400/60">•</span>
             </span>
           ))}
         </div>
