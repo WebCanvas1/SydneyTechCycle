@@ -6,47 +6,37 @@ const HERO_IMAGE = 'https://images.pexels.com/photos/7598913/pexels-photo-759891
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-ink-950">
-      {/* Background image — discarded business IT equipment ready for recycling */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src={HERO_IMAGE}
-          alt="Old computers and IT equipment ready for electronics recycling"
-          className="w-full h-full object-cover opacity-40"
+          alt="IT recycling and sustainable electronics recovery"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-ink-950/40" />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/30 to-ink-950/50" />
       </div>
-
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-grid-dark opacity-40" />
 
       {/* Content */}
       <div className="relative container-px pb-16 pt-32 lg:pb-24 lg:pt-40">
         <div className="max-w-5xl">
-          {/* Location indicator */}
           <div className="flex items-center gap-2 mb-8 animate-fade-in">
             <MapPin className="w-3.5 h-3.5 text-yellow-400" />
             <span className="text-eyebrow text-yellow-400">Sydney • NSW</span>
           </div>
 
-          {/* Main heading */}
-          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up">
+          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up drop-shadow-lg">
             Old Technology.
             <br />
             <span className="text-forest-500">New Purpose.</span>
           </h1>
 
-          {/* Supporting statement */}
-          <p className="text-lg lg:text-xl text-cream-200 max-w-2xl mb-4 animate-fade-up" style={{ animationDelay: '0.15s' }}>
+          <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up drop-shadow-md" style={{ animationDelay: '0.15s' }}>
             Secure, responsible IT asset disposal and electronics recycling for Sydney organisations.
           </p>
 
-          {/* Secondary statement */}
-          <p className="text-base text-cream-300/70 max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.25s' }}>
+          <p className="text-base text-cream-100 max-w-2xl mb-10 animate-fade-up drop-shadow-md" style={{ animationDelay: '0.25s' }}>
             From office technology upgrades to complete IT infrastructure clear-outs, Sydney TechCycle helps organisations securely reuse, recover and recycle unwanted technology.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.35s' }}>
             <a
               href="#request-collection"
@@ -62,7 +52,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Tech strip */}
       <div className="relative border-t border-ink-700/50 bg-ink-950/80 backdrop-blur-sm py-4 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...TECH_STRIP_ITEMS, ...TECH_STRIP_ITEMS].map((item, i) => (
