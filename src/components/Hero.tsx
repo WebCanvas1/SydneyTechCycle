@@ -26,9 +26,11 @@ export default function Hero() {
           </div>
 
           <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up">
-            Old Technology.
+            IT Recycling
             <br />
-            <span className="text-[#22A95A]">New Purpose.</span>
+            for a Cleaner,
+            <br />
+            <span className="text-[#22A95A]">Brighter Tomorrow.</span>
           </h1>
 
           <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up" style={{ animationDelay: '0.15s' }}>
