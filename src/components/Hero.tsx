@@ -1,14 +1,16 @@
 import { ArrowRight, MapPin } from 'lucide-react';
-import { IMAGES, TECH_STRIP_ITEMS } from '@/lib/constants';
+import { TECH_STRIP_ITEMS } from '@/lib/constants';
+
+const HERO_IMAGE = 'https://images.pexels.com/photos/7598913/pexels-photo-7598913.jpeg?auto=compress&cs=tinysrgb&w=1920';
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-ink-950">
-      {/* Background image */}
+      {/* Background image — discarded business IT equipment ready for recycling */}
       <div className="absolute inset-0">
         <img
-          src={IMAGES.heroMain}
-          alt="Data center server infrastructure"
+          src={HERO_IMAGE}
+          alt="Old computers and IT equipment ready for electronics recycling"
           className="w-full h-full object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-ink-950/40" />
@@ -46,7 +48,6 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.35s' }}>
-            {/* Primary CTA — yellow bg, black text, hover green bg white text */}
             <a
               href="#request-collection"
               className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-yellow-400 text-ink-950 font-semibold text-sm tracking-wide rounded-full transition-all duration-300 ease-out-expo hover:bg-forest-600 hover:text-cream-50 hover:shadow-xl hover:shadow-forest-600/30 hover:-translate-y-0.5"
@@ -54,11 +55,7 @@ export default function Hero() {
               Request a Collection
               <ArrowRight className="w-4 h-4" />
             </a>
-            {/* Secondary CTA — transparent with green border */}
-            <a
-              href="#services"
-              className="btn-dark-secondary"
-            >
+            <a href="#services" className="btn-dark-secondary">
               Business Solutions
             </a>
           </div>
