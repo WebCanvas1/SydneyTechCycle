@@ -6,36 +6,36 @@ const HERO_IMAGE = 'https://raw.githubusercontent.com/WebCanvas1/SydneyTechCycle
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-ink-950">
-      {/* Uploaded IT recycling background image */}
+      {/* Keep the recycling symbol visually to the right of the copy. */}
       <div className="absolute inset-0">
         <img
           src={HERO_IMAGE}
           alt="Green recycling symbol on electronic circuit board representing sustainable IT recycling"
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-[62%_center] sm:object-[65%_center]"
         />
       </div>
 
-      {/* Subtle left-side contrast only so the image remains bright and visible. */}
-      <div className="absolute inset-y-0 left-0 w-full lg:w-[55%] bg-gradient-to-r from-ink-950/45 via-ink-950/10 to-transparent pointer-events-none" />
+      {/* Controlled readability zone: strong at the left, fading out before the image focal point. */}
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/65 to-transparent lg:bg-[linear-gradient(90deg,rgba(10,10,10,0.92)_0%,rgba(10,10,10,0.80)_30%,rgba(10,10,10,0.38)_48%,rgba(10,10,10,0)_68%)] pointer-events-none" />
 
       <div className="relative container-px pb-16 pt-32 lg:pb-24 lg:pt-40">
-        <div className="max-w-5xl">
+        <div className="max-w-[760px]">
           <div className="flex items-center gap-2 mb-8 animate-fade-in">
             <MapPin className="w-3.5 h-3.5 text-yellow-400" />
-            <span className="text-eyebrow text-yellow-400 drop-shadow-md">Sydney • NSW</span>
+            <span className="text-eyebrow text-yellow-400">Sydney • NSW</span>
           </div>
 
-          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up drop-shadow-xl">
+          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up">
             Old Technology.
             <br />
-            <span className="text-forest-500">New Purpose.</span>
+            <span className="text-[#22A95A]">New Purpose.</span>
           </h1>
 
-          <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up drop-shadow-lg" style={{ animationDelay: '0.15s' }}>
+          <p className="text-lg lg:text-xl text-cream-50 max-w-2xl mb-4 animate-fade-up" style={{ animationDelay: '0.15s' }}>
             Secure, responsible IT asset disposal and electronics recycling for Sydney organisations.
           </p>
 
-          <p className="text-base text-cream-100 max-w-2xl mb-10 animate-fade-up drop-shadow-lg" style={{ animationDelay: '0.25s' }}>
+          <p className="text-base text-cream-100 max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.25s' }}>
             From office technology upgrades to complete IT infrastructure clear-outs, Sydney TechCycle helps organisations securely reuse, recover and recycle unwanted technology.
           </p>
 
