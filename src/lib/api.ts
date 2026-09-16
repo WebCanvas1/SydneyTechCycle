@@ -30,5 +30,9 @@ export async function submitCollectionRequest(payload: CollectionRequestPayload)
   if (!response.ok || !data.ok) {
     throw new Error(data.error || 'We could not submit your request. Please try again.');
   }
+
+  window.alert("Enquiry submitted successfully!\n\nThank you for contacting Sydney TechCycle. We'll get in touch with you shortly.");
+  window.location.assign('/#request-collection');
+
   return data;
 }
