@@ -2,6 +2,14 @@
   "name": "sydneytechcycle",
   "compatibility_date": "2026-09-15",
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+    "not_found_handling": "single-page-application"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "sydneytechcycle-db",
+      "database_id": "d05351f9-2e0c-491f-a2b6-2825384fc1b8"
+    }
+  ]
 }
