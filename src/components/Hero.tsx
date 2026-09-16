@@ -1,0 +1,81 @@
+import { ArrowRight, MapPin } from 'lucide-react';
+import { IMAGES, TECH_STRIP_ITEMS } from '@/lib/constants';
+
+export default function Hero() {
+  return (
+    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden bg-ink-950">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={IMAGES.heroMain}
+          alt="Data center server infrastructure"
+          className="w-full h-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/80 to-ink-950/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/90 via-ink-950/30 to-ink-950/50" />
+      </div>
+
+      {/* Grid overlay */}
+      <div className="absolute inset-0 bg-grid-dark opacity-40" />
+
+      {/* Content */}
+      <div className="relative container-px pb-16 pt-32 lg:pb-24 lg:pt-40">
+        <div className="max-w-5xl">
+          {/* Location indicator */}
+          <div className="flex items-center gap-2 mb-8 animate-fade-in">
+            <MapPin className="w-3.5 h-3.5 text-yellow-400" />
+            <span className="text-eyebrow text-yellow-400">Sydney • NSW</span>
+          </div>
+
+          {/* Main heading */}
+          <h1 className="text-display-lg text-cream-50 text-5xl sm:text-7xl lg:text-8xl xl:text-9xl mb-6 animate-fade-up">
+            Old Technology.
+            <br />
+            <span className="text-forest-500">New Purpose.</span>
+          </h1>
+
+          {/* Supporting statement */}
+          <p className="text-lg lg:text-xl text-cream-200 max-w-2xl mb-4 animate-fade-up" style={{ animationDelay: '0.15s' }}>
+            Secure, responsible IT asset disposal and electronics recycling for Sydney organisations.
+          </p>
+
+          {/* Secondary statement */}
+          <p className="text-base text-cream-300/70 max-w-2xl mb-10 animate-fade-up" style={{ animationDelay: '0.25s' }}>
+            From office technology upgrades to complete IT infrastructure clear-outs, Sydney TechCycle helps organisations securely reuse, recover and recycle unwanted technology.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '0.35s' }}>
+            {/* Primary CTA — yellow bg, black text, hover green bg white text */}
+            <a
+              href="#request-collection"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-yellow-400 text-ink-950 font-semibold text-sm tracking-wide rounded-full transition-all duration-300 ease-out-expo hover:bg-forest-600 hover:text-cream-50 hover:shadow-xl hover:shadow-forest-600/30 hover:-translate-y-0.5"
+            >
+              Request a Collection
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            {/* Secondary CTA — transparent with green border */}
+            <a
+              href="#services"
+              className="btn-dark-secondary"
+            >
+              Business Solutions
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Tech strip */}
+      <div className="relative border-t border-ink-700/50 bg-ink-950/80 backdrop-blur-sm py-4 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...TECH_STRIP_ITEMS, ...TECH_STRIP_ITEMS].map((item, i) => (
+            <span key={i} className="text-eyebrow text-cream-400/50 mx-8 flex items-center gap-8">
+              {item}
+              <span className="text-yellow-400/60">•</span>
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
