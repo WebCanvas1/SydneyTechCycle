@@ -51,7 +51,7 @@ async function createCollection(request: Request, env: Env) {
 
   const requestId = Number(insert.meta.last_row_id);
   const statements = items.map((item) => env.DB.prepare(
-    'INSERT INTO collection_items (request_id, equipment, quantity) VALUES (?, ?, ?)'
+    'INSERT INTO collection_items (collection_request_id, equipment, quantity) VALUES (?, ?, ?)'
   ).bind(requestId, clean(item.equipment, 100), clean(item.quantity, 50)));
   if (statements.length) await env.DB.batch(statements);
 
